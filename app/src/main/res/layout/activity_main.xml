@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="#d4edeb"
+    tools:context="me.kristoprifti.myappportfolio.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/myAppsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/myAppsLabel"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:text="@string/project1"
+            android:id="@+id/project1"
+            style="@style/ButtonStyle"
+            android:onClick="onClick" />
+
+        <Button
+            android:text="@string/project2"
+            android:id="@+id/project2"
+            style="@style/ButtonStyle"
+            android:onClick="onClick"/>
+
+        <Button
+            android:text="@string/project3"
+            android:id="@+id/project3"
+            style="@style/ButtonStyle"
+            android:onClick="onClick"/>
+
+        <Button
+            android:text="@string/project4"
+            android:id="@+id/project4"
+            style="@style/ButtonStyle"
+            android:onClick="onClick"/>
+
+        <Button
+            android:text="@string/project5"
+            android:id="@+id/project5"
+            style="@style/ButtonStyle"
+            android:onClick="onClick"/>
+
+        <Button
+            android:text="@string/project6"
+            android:id="@+id/project6"
+            style="@style/ButtonStyle"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
