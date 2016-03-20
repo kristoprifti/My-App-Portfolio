@@ -36,37 +36,37 @@
             android:text="@string/project1"
             android:id="@+id/project1"
             style="@style/ButtonStyle"
-            android:onClick="onClick" />
+            android:onClick="displayToast" />
 
         <Button
             android:text="@string/project2"
             android:id="@+id/project2"
             style="@style/ButtonStyle"
-            android:onClick="onClick"/>
+            android:onClick="displayToast"/>
 
         <Button
             android:text="@string/project3"
             android:id="@+id/project3"
             style="@style/ButtonStyle"
-            android:onClick="onClick"/>
+            android:onClick="displayToast"/>
 
         <Button
             android:text="@string/project4"
             android:id="@+id/project4"
             style="@style/ButtonStyle"
-            android:onClick="onClick"/>
+            android:onClick="displayToast"/>
 
         <Button
             android:text="@string/project5"
             android:id="@+id/project5"
             style="@style/ButtonStyle"
-            android:onClick="onClick"/>
+            android:onClick="displayToast"/>
 
         <Button
             android:text="@string/project6"
             android:id="@+id/project6"
             style="@style/ButtonStyle"
-            android:onClick="onClick"/>
+            android:onClick="displayToast"/>
 
     </LinearLayout>
 

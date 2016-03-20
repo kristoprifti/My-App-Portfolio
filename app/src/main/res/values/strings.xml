@@ -9,4 +9,5 @@
     <string name="project4">BUILD IT BIGGER</string>
     <string name="project5">XYZ READER</string>
     <string name="project6">CAPSTONE: MY OWN APP</string>
+    <string name="openApp">This button will launch</string>
 </resources>

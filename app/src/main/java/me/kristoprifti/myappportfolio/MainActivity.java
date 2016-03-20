@@ -1,5 +1,6 @@
 package me.kristoprifti.myappportfolio;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private boolean doubleBackToExitPressedOnce = false;
 
@@ -19,30 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.project1:
-                Toast.makeText(this, "This button will launch my spotify streamer app!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.project2:
-                Toast.makeText(this, "This button will launch my scores app!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.project3:
-                Toast.makeText(this, "This button will launch my library app!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.project4:
-                Toast.makeText(this, "This button will launch my build it bigger app!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.project5:
-                Toast.makeText(this, "This button will launch my xyz reader app!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.project6:
-                Toast.makeText(this, "This button will launch my capstone app!", Toast.LENGTH_SHORT).show();
-                break;
-        }
     }
 
     @Override
@@ -84,5 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
+    }
+
+    public void displayToast(View view) {
+
+        Button button = (Button) view;
+
+        String buttonText = (String) button.getText();
+
+        Context context = getApplicationContext();
+        CharSequence text = getString(R.string.openApp) + " " + buttonText;
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }
